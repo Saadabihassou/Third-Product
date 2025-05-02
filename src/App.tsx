@@ -10,7 +10,6 @@ import Workouts from "./pages/Workouts";
 import History from "./pages/History";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
-import Index from "./pages/Index";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +20,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={
             <MainLayout>
               <Dashboard />

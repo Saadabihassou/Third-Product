@@ -27,7 +27,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <div className="min-h-screen flex w-full">
         <Sidebar>
           <SidebarHeader className="px-6 py-5">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/dashboard" className="flex items-center gap-2">
               <Dumbbell className="h-6 w-6 text-fitness-primary" />
               <span className="font-bold text-xl">FitFlow</span>
             </Link>
@@ -39,7 +39,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 <SidebarMenu>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link to="/">
+                      <Link to="/dashboard">
                         <BarChart size={20} />
                         <span>Dashboard</span>
                       </Link>
@@ -83,7 +83,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div className="flex-1 flex flex-col min-h-screen">
           <header className="border-b flex items-center h-16 px-6 gap-4">
             <SidebarTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="shrink-0">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle sidebar</span>
               </Button>
