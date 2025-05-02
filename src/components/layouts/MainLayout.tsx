@@ -82,10 +82,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
         <div className="flex-1 flex flex-col min-h-screen">
           <header className="border-b flex items-center h-16 px-6 gap-4">
-            <SidebarTrigger asChild>
+            {/* Fix: Using the SidebarTrigger component correctly */}
+            <SidebarTrigger>
               <Button variant="ghost" size="icon" className="shrink-0">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle sidebar</span>
               </Button>
             </SidebarTrigger>
             <h1 className="font-semibold text-lg">FitFlow Workout Hub</h1>
